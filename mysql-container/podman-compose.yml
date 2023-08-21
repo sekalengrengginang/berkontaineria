@@ -1,0 +1,11 @@
+version: '1.0'
+services:
+  db:
+    image: mariadb:8
+    restart: always
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+    ports:
+    - 3306:3306
+    volumes:
+    - ./datamysql:/var/lib/mysql:z
